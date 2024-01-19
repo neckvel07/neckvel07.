@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit&family=Great+Vibes&family=Moirai+One&family=Shadows+Into+Light&display=swap');
+body{
+    background-color: rgb(27, 27, 27);
+    background-image: url(assets/background/background.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+*{
+    margin: 0;
+}
+
+div.center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 160vw;
+}
+
+div.line{
+    display: flex;
+    flex-direction: row;
+}
+
+div.cube{
+    margin: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(41, 41, 41, 0.794);
+    background-size: contain;
+    background-position: bottom;
+    background-position: center;
+    background-repeat:no-repeat;
+    border-radius: 16px;
+    width: 40vw;
+    height: 40vw;
+    box-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
+    transition: 2s;
+}
+
+button#bt{
+    margin-bottom: 15vw;
+    font-size: 36px;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.629);
+    border: none;
+    border-radius: 12px;
+    width: 80vw;
+    height: 15vw;
+}
+
+button#unlock{
+    margin-top: 12vw;
+    font-size: 18px;
+    color: rgb(5, 5, 240);
+    border-radius: 10px;
+}
+
+h3{
+    font-size: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Moirai One', system-ui;
+}
