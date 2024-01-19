@@ -61,9 +61,6 @@ document.getElementById('bt').addEventListener("click", function () {
     h3.forEach(function (elemento) {
         elemento.style.display = 'none';
     });
-    ca.forEach(function (elemento) {
-        elemento.style.transition = '0s';
-    });
 });
 
 unlock.addEventListener("click", function () {

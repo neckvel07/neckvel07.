@@ -37,7 +37,7 @@ div.cube{
     width: 40vw;
     height: 40vw;
     box-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
-    transition: 2s;
+    transition: box-shadow 2s ease, display 2s ease;
 }
 
 button#bt{
@@ -55,7 +55,20 @@ button#unlock{
     margin-top: 12vw;
     font-size: 18px;
     color: rgb(5, 5, 240);
+    background-color: rgb(251, 251, 251);
     border-radius: 10px;
+}
+
+h2 {
+    display: none;
+    font-family: 'Great Vibes';
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0400ff9d, 0 0 70px #2a55ffcb, 0 0 80px #0015ff;
 }
 
 h3{
@@ -64,3 +77,37 @@ h3{
     color: rgb(255, 255, 255);
     font-family: 'Moirai One', system-ui;
 }
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body{
+        background-size: 112%;
+    }
+
+    div.cube{
+        border-radius: 43px;
+    }
+
+    button#bt{
+        font-size: 86px;
+        border-radius: 33px;
+        width: 80vw;
+        height: 15vw;
+    }
+
+    button#unlock{
+        font-size: 50px;
+        width: 15vw;
+        border-radius: 22px;
+    }
+
+    h2{
+        /* display: block; */
+        font-size: 63px;
+    }
+
+    h3 {
+      font-size: 80px;
+    }
+
+    
+  }
