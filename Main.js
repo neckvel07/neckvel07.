@@ -10,6 +10,7 @@ var food = [19];
 var wtd = [10];
 var aft = [6];
 var sex = [9];
+let firstRun = false;
 let locked = true;
 let lock = 0;
 
@@ -55,6 +56,7 @@ function run(x, y, z, p) {
 }
 
 document.getElementById('bt').addEventListener("click", function () {
+    firstRun = true;
     setTimeout(function () {
         run(1, 1, 1, 1);
     }, 1000);
@@ -64,7 +66,8 @@ document.getElementById('bt').addEventListener("click", function () {
 });
 
 unlock.addEventListener("click", function () {
-    lock += 1;
+    if (firstRun === true){
+        lock += 1;
     if (lock % 2 === 0) {
         locked = true;
         unlock.innerText = 'Edit';
@@ -84,6 +87,7 @@ unlock.addEventListener("click", function () {
             cube.style.boxShadow = '0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime';
         });
     }
+    } 
 });
 
 c1.addEventListener("click", function () {
