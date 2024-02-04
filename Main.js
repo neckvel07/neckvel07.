@@ -9,7 +9,7 @@ const i = 0;
 var food = [19];
 var wtd = [10];
 var aft = [6];
-var sex = [9];
+var funTime = [9];
 let firstRun = false;
 let locked = true;
 let lock = 0;
@@ -36,29 +36,29 @@ function sortImg(type) {
     return num;
 }
 
-function run(x, y, z, p) {
-    if (x === 1) {
+function run(x = '') {
+    if (x === 1 || x === '') {
         sortImg(food);
         c1.style.backgroundImage = `url(assets/food/${food[food.length - 1]}.jpeg)`;
     }
-    if (y === 1) {
+    if (x === 2 || x === '') {
         sortImg(wtd);
         c2.style.backgroundImage = `url(assets/wtd/${wtd[wtd.length - 1]}.jpeg)`;
     }
-    if (z === 1) {
+    if (x === 3 || x === '') {
         sortImg(aft);
         c3.style.backgroundImage = `url(assets/aft/${aft[aft.length - 1]}.jpeg)`;
     }
-    if (p === 1) {
-        sortImg(sex);
-        c4.style.backgroundImage = `url(assets/sex/${sex[sex.length - 1]}.jpeg)`;
+    if (x === 4 || x === '') {
+        sortImg(funTime);
+        c4.style.backgroundImage = `url(assets/funTime/${funTime[funTime.length - 1]}.jpeg)`;
     }
 }
 
 document.getElementById('bt').addEventListener("click", function () {
     firstRun = true;
     setTimeout(function () {
-        run(1, 1, 1, 1);
+        run();
     }, 1000);
     h3.forEach(function (elemento) {
         elemento.style.display = 'none';
@@ -97,17 +97,17 @@ c1.addEventListener("click", function () {
 });
 c2.addEventListener("click", function () {
     if (!locked) {
-        run(0, 1);
+        run(2);
     }
 });
 c3.addEventListener("click", function () {
     if (!locked) {
-        run(0, 0, 1);
+        run(3);
     }
 });
 c4.addEventListener("click", function () {
     if (!locked) {
-        run(0, 0, 0, 1);
+        run(4);
     }
 });
 
