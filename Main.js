@@ -14,13 +14,16 @@ let firstRun = false;
 let locked = true;
 let lock = 0;
 
+//Criação de funções//
+
+//Sorteador de números
 function sortNum(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
+//Sortear imagem com o valor da primeira posição na array
 function sortImg(type) {
     if (type.length === type[0]) {
         type.length = 1;
@@ -36,6 +39,7 @@ function sortImg(type) {
     return num;
 }
 
+//Realizar sorteio 
 function run(x = '') {
     if (x === 1 || x === '') {
         sortImg(food);
@@ -55,6 +59,9 @@ function run(x = '') {
     }
 }
 
+//Criação de eventos para os botões//
+
+//Botão de sortear
 document.getElementById('bt').addEventListener("click", function () {
     firstRun = true;
     setTimeout(function () {
@@ -65,6 +72,7 @@ document.getElementById('bt').addEventListener("click", function () {
     });
 });
 
+//Botão de editar
 unlock.addEventListener("click", function () {
     if (firstRun === true){
         lock += 1;
@@ -90,6 +98,7 @@ unlock.addEventListener("click", function () {
     } 
 });
 
+//Evento de sortear somente um quadrado, caso no modo edição
 c1.addEventListener("click", function () {
     if (!locked) {
         run(1);
