@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 9vw;
+    height: 100%;
+    background-color: beige;
+}
+
+*{
+    margin: 0;
+}
+
+div#gifDiv{
+    display: flex;
+    margin-top: 10vw;
+    justify-content: center;
+    width: 100%;
+    transition: margin-top 3s;
+}
+
+div#gifDiv img{
+    width: 80%;
+    border-radius: 12px;
+    transition: margin 2s;
+}
+
+div.center-items{
+    display: flex;
+    justify-content: center;
+}
+
+div.buttons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    transition: margin-top 3s;
+}
+
+h4{
+    font-size: 42px;
+    transition: margin-top 3s;
+}
+
+button{
+    width: 20vw;
+    height: 20vw;
+    border: 1px solid;
+    border-radius: 12px;
+    margin: 2vw 2vw 0 2vw;
+    font-size: 17px;
+}
+
+button#nop{
+    background-color: rgba(255, 34, 34, 0.292);
+    border-color: rgb(255, 0, 0);
+    color: rgb(255, 0, 0);
+}
+
+button#sip{
+    background-color: rgba(3, 174, 0, 0.292);
+    border-color: rgb(0, 128, 0);
+    color: rgb(0, 127, 0);
+}
+
+
