@@ -2,7 +2,7 @@
 
 body{
     background-color: rgb(27, 27, 27);
-    background-image: url(assets/background/background.jpg);
+    background-image: url(../assets/background/background.jpg);
     background-size: cover;
     overflow: hidden;
 }
@@ -48,6 +48,7 @@ div.cube{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
     background-color: rgba(41, 41, 41, 0.794);
     background-size: contain;
     background-position: bottom;
@@ -57,7 +58,7 @@ div.cube{
     width: 40vw;
     height: 40vw;
     box-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 15px rgb(255, 255, 255), 0 0 20px rgb(255, 255, 255);
-    transition: box-shadow 2s ease, display 2s ease;
+    transition: box-shadow 2s ease, display 2s ease, opacity 0.5s ease;
 }
 
 button#bt{

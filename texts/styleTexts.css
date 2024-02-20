@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Parisienne&display=swap');
+
+body{
+    background-color: rgb(53, 53, 53);
+}
+
+*{
+    margin: 0;
+}
+
+div.title{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 2vw 0 2vw 0;
+}
+
+div.center{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 4vw;
+    justify-content: center;
+}
+
+div.cube{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 45vw;
+    height: 56vw;
+}
+
+div.img{
+    background-color: black;
+    background-size: cover; 
+    margin: 2vw 0 0 0;
+    width: 40vw;
+    height: 37vw;
+}
+
+div.texts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 45px;
+    font-family: "Parisienne", cursive;
+    font-weight: 1000;
+    text-shadow: 1px 1.2px 5px white;
+}
+
+h2{
+    font-family: "Caveat", cursive;
+    text-align: center;
+    font-size: 27px;
+}
+
+p{
+    font-family: "Caveat", cursive;
+    text-align: end;
+    font-size: 12px;
+    margin-right: 1vw;
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    
+}

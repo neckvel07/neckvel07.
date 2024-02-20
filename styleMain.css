@@ -1,18 +1,20 @@
-body{
-    background-color: rgb(136, 136, 136);
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Itim&family=Micro+5&display=swap');
+
+body {
+    background-color: rgb(235, 235, 210);
     width: 100%;
     overflow-x: hidden;
     height: auto;
 }
 
-*{
+* {
     margin: 0;
 }
 
-div.background{
-    position: absolute;
+div.background {
     width: 100%;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -25,36 +27,56 @@ div.background{
     z-index: -6;
 }
 
-div.center{
+div.center {
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
     gap: 6vw;
 }
 
-div.center-both{
+div.center-both {
     display: flex;
     justify-content: space-around;
 }
 
-div.divide{
+div.center-noko-spotify {
+    display: flex;
+}
+
+div.clima {
+    display: flex;
+    flex-direction: row;
+}
+
+div.divide {
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 3vw;
 }
 
-div.addSpotify{
+div.texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.addSpotify {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
     height: 110vw;
     gap: 7vw;
     z-index: 1;
+    margin-top: 2vw;
     justify-content: space-around;
+    overflow-y: hidden;
     transition: opacity 0.5s ease;
 }
 
-div.moveSpotify{
+div.moveSpotify {
     background-color: rgba(172, 172, 172, 0.241);
     display: flex;
     flex-direction: row;
@@ -64,36 +86,122 @@ div.moveSpotify{
     border-radius: 12px;
 }
 
-img.seta{
+a.teste {
+    border-radius: 50%;
+    background-color: rgba(103, 103, 103, 0.672);
+    background-size: 8vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 13vw;
+    height: 13vw;
+}
+
+a.teste#alianca {
+    background-image: url('./assets/icon/alianca.png');
+}
+
+a.teste#dado {
+    background-image: url('./assets/icon/dado.png');
+}
+
+img.seta {
     width: 11vw;
     height: 11vw;
 }
 
-img.homeGif{
+img.homeGif {
     width: 40vw;
     height: 40vw;
     border-radius: 12px;
-    margin: 1vw 0 3vw 0;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
 }
 
-div#left img.seta{
+div#left img.seta {
     transform: scaleX(-1);
 }
 
-iframe.iframeSpotify{
+iframe.iframeSpotify {
     display: flex;
-    border-radius:12px;
+    border-radius: 12px;
     width: 70%;
     height: 110vw;
     z-index: 2;
 }
 
-h1{
+h1 {
+    font-family: "Bungee", sans-serif;
     color: white;
+    font-size: 28px;
     margin: 10vw;
+    text-shadow: 2px 1px 2px black;
 }
 
-h2{
+h2 {
+    font-family: "Itim", cursive;
     color: white;
+    text-shadow: 2px 1px 2px black;
 }
 
+h3 {
+    font-family: "Itim", cursive;
+    color: white;
+    text-shadow: 2px 1px 2px black;
+}
+
+h4 {
+    font-family: "Itim", cursive;
+    color: white;
+    text-shadow: 2px 1px 2px rgb(0, 0, 255);
+}
+
+/*Dimensões do cell do noko*/
+@media (min-width: 601px) and (max-width: 1200px) {
+    div.addSpotify {
+        width: 100%;
+        height: 117.5vw;
+        gap: 45vw;
+        overflow-x: hidden;
+        z-index: 1;
+    }
+
+    iframe.iframeSpotify {
+        margin-top: 35vw;
+        border-radius: 12px;
+        width: 28%;
+        height: 47vw;
+        transform: scale(2.5); /*Ajuste a escala conforme necessário */
+        transform-origin: center center;
+        z-index: 2;
+    }
+
+    img.homeGif {
+        width: 42vw;
+        height: 42vw;
+        border-radius: 30px;
+    }
+
+    h1 {
+        font-size: 90px;
+        margin: 10vw;
+        text-shadow: 4px 2px 10px black;
+    }
+
+    h2 {
+        font-size: 70px;
+        color: white;
+        text-shadow: 4px 2px 10px black;
+    }
+
+    h3 {
+        font-size: 58px;
+        color: white;
+        text-shadow: 4px 2px 9px black;
+    }
+
+    h4 {
+        font-size: 45px;
+        color: white;
+        text-shadow: 4px 2px 8px rgb(0, 0, 255);
+    }
+}

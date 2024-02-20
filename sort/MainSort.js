@@ -43,20 +43,23 @@ function sortImg(type) {
 function run(x = '') {
     if (x === 1 || x === '') {
         sortImg(food);
-        c1.style.backgroundImage = `url(assets/food/${food[food.length - 1]}.jpeg)`;
+        c1.style.backgroundImage = `url(../assets/food/${food[food.length - 1]}.jpeg)`;
     }
     if (x === 2 || x === '') {
         sortImg(wtd);
-        c2.style.backgroundImage = `url(assets/wtd/${wtd[wtd.length - 1]}.jpeg)`;
+        c2.style.backgroundImage = `url(../assets/wtd/${wtd[wtd.length - 1]}.jpeg)`;
     }
     if (x === 3 || x === '') {
         sortImg(aft);
-        c3.style.backgroundImage = `url(assets/aft/${aft[aft.length - 1]}.jpeg)`;
+        c3.style.backgroundImage = `url(../assets/aft/${aft[aft.length - 1]}.jpeg)`;
     }
     if (x === 4 || x === '') {
         sortImg(funTime);
-        c4.style.backgroundImage = `url(assets/funTime/${funTime[funTime.length - 1]}.jpeg)`;
+        c4.style.backgroundImage = `url(../assets/funTime/${funTime[funTime.length - 1]}.jpeg)`;
     }
+    ca.forEach(function (elemento) {
+        elemento.style.opacity = '1';
+    })
 }
 
 //Criação de eventos para os botões//
@@ -64,6 +67,9 @@ function run(x = '') {
 //Botão de sortear
 document.getElementById('bt').addEventListener("click", function () {
     firstRun = true;
+    ca.forEach(function(elemento) {
+        elemento.style.opacity = '0';
+    })
     setTimeout(function () {
         run();
     }, 1000);
