@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const addSpotify = document.querySelector(".addSpotify");
     const left = document.querySelector("#left");
     const right = document.getElementById("right");
-    const playlists = ['https://open.spotify.com/embed/playlist/4Knctc7wEHBfqItvI3Z0CC?utm_source=generator', 'https://open.spotify.com/embed/playlist/3w0gZ6WZWfFZr4l9swUiTs?utm_source=generator', 'https://open.spotify.com/embed/playlist/1qmmVdDWtMUyWWALptrNKY?utm_source=generator']
+    const playlists = ['https://open.spotify.com/embed/playlist/4Knctc7wEHBfqItvI3Z0CC?utm_source=generator', 'https://open.spotify.com/embed/playlist/3w0gZ6WZWfFZr4l9swUiTs?utm_source=generator', 'https://open.spotify.com/embed/playlist/1qmmVdDWtMUyWWALptrNKY?utm_source=generator', 'https://open.spotify.com/embed/playlist/7tAP384gwsTdx873FoTVcb?utm_source=generator', 'https://open.spotify.com/embed/playlist/6kOYDS3cGchM1aEsfyMOfz?utm_source=generator']
     const nicoGifList = ['cookingCat', 'lambretta', 'lis', 'crab'];
     const nokoGifList = ['grass', 'danceCat', 'rDGDance', 'sailor', 'noko'];
     const apiKey = 'aa2005c3657cb4272b6a7eca24481cc1';

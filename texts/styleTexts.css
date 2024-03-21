@@ -2,7 +2,7 @@
 
 body {
     background-color: rgb(53, 53, 53);
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 * {
@@ -40,8 +40,8 @@ div.darker {
     background-color: rgba(0, 0, 0, 0.837);
     position: absolute;
     display: none;
-    width: 100vw;
-    height: 110vh;
+    width: 100%;
+    height: 200vh;
     z-index: 2;
     overflow: hidden;
     transition: opacity 0.5s ease;
@@ -75,10 +75,11 @@ div.cubeBack {
     width: 45vw;
     height: 56vw;
     font-size: 1rem;
+    
 }
 
 #big {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(2);
@@ -88,12 +89,13 @@ div.cubeBack {
 }
 
 #bigBack {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(2) rotateY(180deg);
     transform-origin: center center;
     backface-visibility: hidden;
+    overflow: hidden;
     z-index: 9;
 }
 
@@ -136,8 +138,8 @@ h3 {
     margin: 5vw;
     font-family: "Caveat", cursive;
     max-width: 93%;
-    overflow-y: scroll;
-    font-size: clamp(12px, 23px, 45px);
+    font-size: 18px;
+    animation: scroll 60s linear infinite;
 }
 
 p {
@@ -164,6 +166,10 @@ p {
         font-size: 68px;
     }
 
+    h3{
+        font-size: 40px;
+    }
+
     p {
         font-family: "Caveat", cursive;
         text-align: end;
@@ -171,3 +177,12 @@ p {
         margin-right: 1vw;
     }
 }
+
+@keyframes scroll {
+    15% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }

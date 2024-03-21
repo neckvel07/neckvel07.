@@ -19,7 +19,7 @@ div.background {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(./assets/background/flowers.jpg);
+    background-image: url(../assets/background/flowers.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
