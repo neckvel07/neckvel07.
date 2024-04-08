@@ -94,6 +94,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     menu.addEventListener("click", function () {
         menu.style.top = '-300vw';
         body.style.overflow = '';
-    })
+    });
 });
 

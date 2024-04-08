@@ -13,6 +13,26 @@ body {
     margin: 0;
 }
 
+dialog {
+    background-color: rgba(0, 0, 0, 0.63);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+
+    width: 100vw;
+    height: 100vh;
+    top: -300vw;
+    z-index: 11;
+    transition: .5s ease-in;
+}
+
+dialog a img{
+    width: 30vw;
+}
+
 div.title {
     display: flex;
     width: 98vw;

@@ -1,4 +1,5 @@
 const body = document.querySelector('body');
+const menu = document.querySelector('dialog');
 const mediaQuery = window.matchMedia("(min-width: 601px) and (max-width: 1200px)");
 const h3 = document.querySelector('h3');
 const addPhotos = document.querySelector('.center');
@@ -105,3 +106,17 @@ for (let i = 0; i < content.length; i++) {
     });
     addPhotos.appendChild(card);
 };
+
+document.getElementById('title').addEventListener("click", function () {
+    window.scroll({
+        top: 0,
+        behavior: 'smooth'
+    });
+    menu.style.top = '0';
+    body.style.overflow = 'hidden';
+});
+
+menu.addEventListener("click", function () {
+    menu.style.top = '-300vw';
+    body.style.overflow = '';
+});

@@ -7,16 +7,26 @@
         <title>Texts/Photos</title>
     </head>
     <body>
-        <div class="darker" onclick="closePhoto(event)"></div>
+        <dialog class="menuContent">
+            <a href="../index.html">
+              <img src="../assets/icon/home.png" alt="">
+            </a>
+            <a href="../texts/texts.html">
+              <img src="../assets/icon/photos.png" alt="">
+            </a>
+            <a href="../sort/indexSort.html">
+              <img src="../assets/icon/dado.png" alt="">
+            </a>
+            <a href="../ask/index2.html">
+              <img src="../assets/icon/ali.png" alt="">
+            </a>
+        </dialog>
         <div class="title">
-            <h1 id="text">. 🩷 .Memories. 🩷 .</h1>
+            <h1 id="title">. 🩷 .Memories. 🩷 .</h1>
         </div>
-        <div class="centerElements" onclick="closePhoto(event)">
-            <div class="bigPhotoAdd" onclick="flipElement()"></div>
-        </div>
-        
-
-        <div class="center"></div>
+        <div class="addPhotos"></div>
+        <div class="writeContent"></div>
+        <div class="addPhotosAfter"></div>
         <script src="MainTexts.js"></script>
     </body>
 </html>
