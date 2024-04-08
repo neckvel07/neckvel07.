@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", async function () {
     const body = document.querySelector("body");
+    const menu = document.querySelector('dialog');
     const nicoTemp = document.getElementById('nicoTemp');
     const nokoTemp = document.getElementById('nokoTemp');
     const nicoGif = document.getElementById('nicoGif');
     const nokoGif = document.getElementById('nokoGif');
     const addSpotify = document.querySelector(".addSpotify");
-    const left = document.querySelector("#left");
-    const right = document.getElementById("right");
     const playlists = ['https://open.spotify.com/embed/playlist/4Knctc7wEHBfqItvI3Z0CC?utm_source=generator', 'https://open.spotify.com/embed/playlist/3w0gZ6WZWfFZr4l9swUiTs?utm_source=generator', 'https://open.spotify.com/embed/playlist/1qmmVdDWtMUyWWALptrNKY?utm_source=generator', 'https://open.spotify.com/embed/playlist/7tAP384gwsTdx873FoTVcb?utm_source=generator', 'https://open.spotify.com/embed/playlist/6kOYDS3cGchM1aEsfyMOfz?utm_source=generator']
     const nicoGifList = ['cookingCat', 'lambretta', 'lis', 'crab'];
     const nokoGifList = ['grass', 'danceCat', 'rDGDance', 'sailor', 'noko'];
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     const pais = 'BR';
     const temperatura = [];
     const condicao = [];
-    var count = 0;
     var countGifNico = Math.floor(Math.random() * (nicoGifList.length - 1 + 1)) + 0;
     var countGifNoko = Math.floor(Math.random() * (nokoGifList.length - 1 + 1)) + 0;
 
@@ -35,41 +33,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             .catch(error => console.error(`Erro ao obter dados de ${cidade}:`, error));
     });
 
-    function iOrder() {
-        if (count >= playlists.length) {
-            count = 0;
-        }
-        if (count < 0) {
-            count = playlists.length - 1;
-        }
-        console.log(count, playlists[count])
-    }
-
     function createSpotify() {
         for (let i = 0; i < playlists.length; i++) {
-            var iFrameAdd = `<iframe class="iframeSpotify" src="${playlists[count]}" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
+            var iFrameAdd = `<iframe class="iframeSpotify" src="${playlists[i]}" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`
             addSpotify.innerHTML += iFrameAdd;
-            count++;
-            iOrder();
         }
-    }
-
-    function changeSpotify() {
-        const iFrameAll = document.querySelectorAll('.iframeSpotify');
-        addSpotify.style.opacity = 0;
-
-        setTimeout(function () {
-            iFrameAll.forEach(iframe => {
-                iframe.style.display = 'none';
-            });
-            addSpotify.innerHTML = '';
-        }, 500);
-        setTimeout(function () {
-            createSpotify();
-        }, 600);
-        setTimeout(function () {
-            addSpotify.style.opacity = 1;
-        }, 900);
     }
 
     function changeGif() {
@@ -102,17 +70,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         nokoTemp.innerText = `${temperatura[1]}˚C`;
     }, 1000);
 
-    left.addEventListener("click", function () {
-        count--;
-        iOrder();
-        changeSpotify();
-    })
-    right.addEventListener("click", function () {
-        count++;
-        iOrder();
-        changeSpotify();
-    });
-
     window.onload = function () {
         changeGif();
         createSpotify();
@@ -124,4 +81,19 @@ document.addEventListener("DOMContentLoaded", async function () {
             }, 600);
         }, 6500);
     }
+
+    document.getElementById('title').addEventListener("click", function () {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+        menu.style.top = '0';
+        body.style.overflow = 'hidden';
+    });
+    
+    menu.addEventListener("click", function () {
+        menu.style.top = '-300vw';
+        body.style.overflow = '';
+    })
 });
+

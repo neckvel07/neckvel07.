@@ -6,6 +6,7 @@ body{
     gap: 9vw;
     height: 100%;
     background-color: beige;
+    touch-action: manipulation;
 }
 
 *{

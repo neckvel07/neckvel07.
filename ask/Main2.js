@@ -210,9 +210,9 @@ sip.addEventListener("click", function () {
                         clearInterval(interval);
                     }
                 }
-            }, 1100);
+            }, 3400);
 
-        }, 500);
+        }, 1000);
     }
 });
 //INICIAR CONFETES

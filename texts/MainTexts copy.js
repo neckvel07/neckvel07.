@@ -2,9 +2,7 @@ const body = document.querySelector('body');
 const mediaQuery = window.matchMedia("(min-width: 601px) and (max-width: 1200px)");
 const h3 = document.querySelector('h3');
 const addPhotos = document.querySelector('.center');
-// const addBigPhoto = document.querySelector('.bigPhotoAdd');
 const centerElements = document.querySelector('.centerElements');
-// const darker = document.querySelector('.darker');
 const content = [
     {
         title: 'Pixar',
@@ -75,39 +73,8 @@ for (let i = 0; i < content.length; i++) {
 `;
     card.innerHTML = contents;
     let photo = card.querySelector('.img');
-    photo.style.backgroundImage = `url(ss${content[i].src})`;
+    photo.style.backgroundImage = `url(${content[i].src})`;
 
-    // card.addEventListener("click", function () {
-    //     window.scrollTo({
-    //         top: 0,
-    //         behavior: 'smooth'
-    //     });
-    //     body.style.overflow = 'hidden';
-    //     addBigPhoto.innerHTML = '';
-    //     darker.style.display = 'flex';
-    //     centerElements.style.zIndex = '3';
-    //     const bigCard = document.createElement('div');
-    //     bigCard.classList.add('cube');
-    //     bigCard.id = 'big';
-    //     bigCard.innerHTML = contents;
-    //     bigCard.querySelector('.img').style.backgroundImage = `url(${content[i].src})`;
-    //     addBigPhoto.appendChild(bigCard);
-    //     addBigPhoto.style.opacity = '1';
-
-    //     const bigCardBack = document.createElement('div');
-    //     bigCardBack.classList.add('cubeBack');
-    //     bigCardBack.id = 'bigBack';
-    //     bigCardBack.innerHTML = `
-    //     <h3>${content[i].text}</h3>
-    //     `;
-    //     addBigPhoto.appendChild(bigCardBack);
-    //     // if (mediaQuery.matches) { 
-    //     //     document.querySelector("h3").style.fontSize = '';
-    //     // } else {
-    //     //     document.querySelector("h3").style.fontSize = `${content[i].mine}`;
-    //     // }
-    //     addBigPhoto.style.opacity = '1';
-    // });
     card.addEventListener("click", function () {
         addPhotos.innerHTML = '';
         for (let a = 0; a < content.length; a++) {
@@ -123,42 +90,18 @@ for (let i = 0; i < content.length; i++) {
                         <p>${content[i].text}</p>
                 `;
                 writeTextContent.innerHTML = writeText;
+                let selectPhoto = a === 1 ? `..assets/photos/${contents[i].src}` : `url(../assets/photos/${i}/ ${a})`;
+                let photo = card.querySelector('.img');
+                photo.style.backgroundImage = selectPhoto;
                 addPhotos.appendChild(writeTextContent);
             } 
             
             card.innerHTML = contents;
             let photo = card.querySelector('.img');
-            photo.style.backgroundImage = `url(ss${content[i].src})`;
+            photo.style.backgroundImage = `url(${content[i].src})`;
             addPhotos.appendChild(card);
         }
         
     });
     addPhotos.appendChild(card);
 };
-
-// function closePhoto(event) {
-//     if (!addBigPhoto.contains(event.target)) {
-//         addBigPhoto.style.transform = 'rotateY(0deg)';
-//         pass = false;
-//         setTimeout(function () {
-//             addBigPhoto.style.opacity = '0';
-//             darker.style.opacity = '0';
-//             setTimeout(function () {
-//                 addBigPhoto.innerHTML = '';
-//                 darker.style.display = 'none'
-//                 centerElements.style.zIndex = '-2';
-//                 darker.style.opacity = '1';
-//                 body.style.overflow = 'auto';
-//             }, 500);
-//         }, 1000);
-//     } else {
-//         if (pass === false) {
-//             addBigPhoto.style.transform = 'rotateY(180deg)';
-//             pass = true;
-//         } else {
-//             addBigPhoto.style.transform = 'rotateY(0deg)';
-//             pass = false;
-//         }
-
-//     };
-// };
