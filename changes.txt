@@ -1,0 +1,19 @@
+var texts = [
+    'Mesmo sabendo que eu sou ciumento?',
+    'Mesmo sabendo que eu sou safadinho?',
+    'Mesmo sabendo que eu sou baixinho?',
+    'Mesmo sabendo que eu sou preguiçoso?',
+    'Mesmo sabendo que eu sou meio alemão?',
+    'Mesmo sabendo que eu ronco?(ainda n sabe)',
+    'Gente quantos simmm`s 🤩',
+    'Bom, então...',
+    'Prometo sempre alegrar teus dias...',
+    'Prometo sempre demonstrar meu amor...',
+    'Prometo sempre fazer comidinhas deliciosas...',
+    'Prometo sempre te ajudar com oq precisar...',
+    'Prometo sempre te colocar em primeiro lugar...',
+    'Prometo te fazer o menino mais feliz do mundo!',
+    'Então.. finalmente namorando yeiiii  🥳 🥳 🥳 🥳 🥳 🥳',
+    'Espera um pouquinho....',
+    'Ta faltando só uma coisinha hihi'
+];

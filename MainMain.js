@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    const body = document.querySelector("body");
+    const title = document.getElementById('title');
     const menu = document.querySelector('dialog');
     const nicoTemp = document.getElementById('nicoTemp');
     const nokoTemp = document.getElementById('nokoTemp');
@@ -70,6 +70,20 @@ document.addEventListener("DOMContentLoaded", async function () {
         nokoTemp.innerText = `${temperatura[1]}˚C`;
     }, 1000);
 
+    
+    title.addEventListener("click", function () {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+        menu.style.top = '0';
+        document.addEventListener("click", function(event) {
+            if (event.target === menu || event.target !== title && event.target !== menu) {
+                    menu.style.top = '-100vw';
+            }
+        });
+    });
+
     window.onload = function () {
         changeGif();
         createSpotify();
@@ -81,19 +95,5 @@ document.addEventListener("DOMContentLoaded", async function () {
             }, 600);
         }, 6500);
     }
-
-    document.getElementById('title').addEventListener("click", function () {
-        window.scroll({
-            top: 0,
-            behavior: 'smooth'
-        });
-        menu.style.top = '0';
-        body.style.overflow = 'hidden';
-    });
-    
-    menu.addEventListener("click", function () {
-        menu.style.top = '-300vw';
-        body.style.overflow = '';
-    });
 });
 

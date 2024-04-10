@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Parisienne&display=swap');
 
-
 body {
     -webkit-padding-start: 2vw;
     width: 90vw;
@@ -13,39 +12,56 @@ body {
     margin: 0;
 }
 
-dialog {
-    background-color: rgba(0, 0, 0, 0.63);
-    border-radius: 0 0 12px 12px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5vh;
+/*//////////MENU//////////*/
 
-    width: 88vw;
-    height: 100%;
-    top: -300vw;
-    z-index: 11;
-    transition: .5s ease-in;
-}
-
-dialog a img{
-    width: 30vw;
-}
-
-.title {
+nav {
     display: flex;
     width: 98vw;
     justify-content: center;
     margin: 2vw 0 2vw 0;
 }
 
+dialog {
+    background-color: rgba(0, 0, 0, 0.63);
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+
+    width: 80vw;
+    height: 8vh;
+    top: -100vw;
+    z-index: 11;
+    margin: 0 auto;
+    transition: .5s ease-in;
+}
+
+dialog a img {
+    width: 10vw;
+}
+
+/*//////////CONTEUDO DA PAGINA//////////*/
+
+/*/////ADICAO DE CONTEUDO/////*/
 .addPhotos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
     gap: 4vw 0;
+}
+
+div.writeTextContent{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 4vh 4vw;
+    margin: 2vw 0;
+
+    background-color: rgb(255, 255, 255);
 }
 
 .addPhotosAfter {
@@ -55,6 +71,7 @@ dialog a img{
     gap: 4vw 0;
 }
 
+/*/////CONSTRUCAO DO CARD/////*/
 div.cube {
     display: flex;
     flex-direction: column;
@@ -83,22 +100,22 @@ div.texts {
     position: relative;
 }
 
-div.writeTextContent{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: fit-content;
-    padding: 4vh 4vw;
-    margin: 2vw 0;
-
-    background-color: rgb(255, 255, 255);
-}
+/*//////////TEXTS FONTS//////////*/
 
 p.pTexts{
     color: white;
     font-size: 162%;
     /* text-wrap:wrap; */
     text-align: justify;
+}
+
+p {
+    font-family: "Caveat", cursive;
+    text-align: end;
+    font-size: 12px;
+    margin-right: 1vw;
+    bottom: 0;
+    right: 0;
 }
 
 h1 {
@@ -122,26 +139,24 @@ h3 {
     animation: scroll 60s linear infinite;
 }
 
-p {
-    font-family: "Caveat", cursive;
-    text-align: end;
-    font-size: 12px;
-    margin-right: 1vw;
-    bottom: 0;
-    right: 0;
-}
-
+/*//////////DIMENSOES CELL NOKO//////////*/
 @media (min-width: 601px) and (max-width: 1200px) {
+    dialog {
+        border-radius: 0 0 42px 42px;
+
+        width: 85vw;
+        height: 10vh;
+    }
+
+    dialog a img {
+        width: 11vw;
+    }
+    
     h1 {
         font-size: 95px;
-        font-family: "Parisienne", cursive;
-        font-weight: 1000;
-        text-shadow: 1px 1.2px 5px white;
     }
 
     h2 {
-        font-family: "Caveat", cursive;
-        text-align: center;
         font-size: 68px;
     }
 
@@ -150,10 +165,7 @@ p {
     }
 
     p {
-        font-family: "Caveat", cursive;
-        text-align: end;
         font-size: 32px;
-        margin-right: 1vw;
     }
 
     p.pTexts{

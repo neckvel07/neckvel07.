@@ -22,23 +22,27 @@ var sipSize = nopSize;
 var nopTextSize = parseInt(window.getComputedStyle(nop).fontSize);
 var count = 0;
 var texts = [
-    'Mesmo sabendo que eu sou ciumento?',
+    'Mesmo sabendo que eu sou "ciumentinho"?',
     'Mesmo sabendo que eu sou safadinho?',
     'Mesmo sabendo que eu sou baixinho?',
     'Mesmo sabendo que eu sou preguiçoso?',
     'Mesmo sabendo que eu sou meio alemão?',
+    'Mesmo sabendo que eu tenho meu lado nerdola?',
     'Mesmo sabendo que eu ronco?(ainda n sabe)',
-    'Gente quantos simmm`s 🤩',
+    'Gntt... tu me ama msm heinn 🤩',
     'Bom, então...',
     'Prometo sempre alegrar teus dias...',
     'Prometo sempre demonstrar meu amor...',
     'Prometo sempre fazer comidinhas deliciosas...',
     'Prometo sempre te ajudar com oq precisar...',
+    'Prometo sempre ser teu porto seguro diante de qqlr situação...',
     'Prometo sempre te colocar em primeiro lugar...',
     'Prometo te fazer o menino mais feliz do mundo!',
     'Então.. finalmente namorando yeiiii  🥳 🥳 🥳 🥳 🥳 🥳',
-    'Espera um pouquinho....',
-    'Ta faltando só uma coisinha hihi'
+    'Eu tinha escrito tudo isso antes de surgir a oportunidade de me declarar no Buzz..',
+    'Por isso tá como se eu tivesse pedindo...', 'Mas achei melhor manter, só alterei a última parte hehe',
+    'Te amo muito, amor!',
+    'Bjs do namorado Nick!!! 😆🧡'
 ];
 const possibleColors = [
     "#ff7336",
@@ -56,7 +60,7 @@ function sizeChanger(x, y, z) {
     if (x === 'nop') {
         if (y === '-') {
             nopSize -= z;
-            nopTextSize -= z*2;
+            nopTextSize -= z * 2;
             if (nopSize <= 0) {
                 nop.style.display = 'none';
             }
@@ -111,7 +115,7 @@ function confettiParticle() {
     } else {
         this.r = randomFromTo(11, 33); // radius
     }
-    
+
     this.d = Math.random() * maxConfettis + 11;
     this.color =
         possibleColors[Math.floor(Math.random() * possibleColors.length)];
@@ -162,14 +166,14 @@ function Draw() {
 
 window.addEventListener(
     "resize",
-    function() {
-      W = window.innerWidth;
-      H = window.innerHeight;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    function () {
+        W = window.innerWidth;
+        H = window.innerHeight;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     },
     false
-  );
+);
 
 for (var i = 0; i < maxConfettis; i++) {
     particles.push(new confettiParticle());
@@ -195,28 +199,29 @@ sip.addEventListener("click", function () {
     changeText();
     sizeChanger('sip', '+', 2);
     sizeChanger('nop', '-', 5);
-    if (count >= 7) {
+    if (count >= 8) {
+        let countAfter = count; //passar pra outra se nn dava pau
         gravity();
+        let intervalTime = 4000;
         setTimeout(function () {
             gif.style.marginTop = '23vw'
             var interval = setInterval(function () {
-                h4.innerText = texts[count];
-                count++;
-                if (count >= texts.length - 2) {
-                    // confetes
+                h4.innerText = texts[countAfter];
+                countAfter++;
+                if (countAfter >= texts.length - 4) {
+                    // CHAMAR CONFETES
                     confettiOn = true;
                     gif.src = '../assets/gif/yes2.gif';
-                    if (count >= texts.length) {
+                    if (countAfter >= texts.length) {
                         clearInterval(interval);
                     }
                 }
-            }, 3400);
-
+            }, intervalTime);
         }, 1000);
     }
 });
-//INICIAR CONFETES
 
+//INICIAR CONFETES
 setInterval(function () {
     if (confettiOn === true && j === 0) {
         startConfetti();

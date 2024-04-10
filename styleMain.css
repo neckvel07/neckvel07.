@@ -16,48 +16,41 @@ body {
     margin: 0;
 }
 
+/*//////////MENU//////////*/
+
+nav {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
 dialog {
     background-color: rgba(0, 0, 0, 0.63);
+    border-radius: 0 0 12px 12px;
     position: absolute;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 5vh;
 
-    width: 100vw;
-    height: 100vh;
-    top: -300vw;
+    width: 80vw;
+    height: 8vh;
+    top: -100vw;
     z-index: 11;
+    margin: 0 auto;
     transition: .5s ease-in;
 }
 
-dialog a img{
-    width: 30vw;
+dialog a img {
+    width: 10vw;
 }
 
-nav{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-}
+/*//////////CORPO DA PAGINA//////////*/
 
-div.center {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 6vw;
-}
-
-div.center-both {
+section.center-both {
     display: flex;
     justify-content: space-around;
-}
-
-div.clima {
-    display: flex;
-    flex-direction: row;
 }
 
 div.divide {
@@ -65,6 +58,14 @@ div.divide {
     align-items: center;
     flex-direction: column;
     gap: 3vw;
+}
+
+img.homeGif {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
 }
 
 div.texts {
@@ -78,60 +79,22 @@ div.addSpotify {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 1;
+    margin: 7vw 0;
     padding: 0;
     gap: 3vw;
+    z-index: 1;
     transition: opacity 0.5s ease;
 }
 
 iframe.iframeSpotify {
     border-radius: 12px;
     width: 90%;
-    height: 33vh;
+    height: 25vh;
     z-index: 2;
     margin: 0;
 }
 
-iframe.iframeSpotify:target {
-    height: 40vh;
-}
-
-a.teste {
-    border-radius: 50%;
-    background-color: rgba(103, 103, 103, 0.672);
-    background-size: 8vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 13vw;
-    height: 13vw;
-}
-
-a.teste#alianca {
-    background-image: url('./assets/icon/alianca.png');
-}
-
-a.teste#dado {
-    background-image: url('./assets/icon/dado.png');
-}
-
-img.seta {
-    width: 11vw;
-    height: 11vw;
-}
-
-img.homeGif {
-    width: 40vw;
-    height: 40vw;
-    border-radius: 12px;
-    object-fit: cover;
-    transition: opacity 0.5s ease;
-}
-
-div#left img.seta {
-    transform: scaleX(-1);
-}
-
-
+/*//////////TEXTS FONTS//////////*/
 
 h1 {
     font-family: "Bungee", sans-serif;
@@ -159,8 +122,18 @@ h4 {
     text-shadow: 2px 1px 2px rgb(0, 0, 255);
 }
 
-/*Dimensões do cell do noko*/
+/*//////////DIMENSOES CELL NOKO//////////*/
 @media (min-width: 601px) and (max-width: 1200px) {
+    dialog {
+        border-radius: 0 0 42px 42px;
+
+        width: 85vw;
+        height: 10vh;
+    }
+
+    dialog a img {
+        width: 11vw;
+    }
 
     img.homeGif {
         width: 42vw;
@@ -170,26 +143,21 @@ h4 {
 
     h1 {
         font-size: 90px;
-        margin: 10vw;
         text-shadow: 4px 2px 10px black;
     }
 
     h2 {
         font-size: 70px;
-        color: white;
         text-shadow: 4px 2px 10px black;
     }
 
     h3 {
         font-size: 58px;
-        color: white;
         text-shadow: 4px 2px 9px black;
     }
 
     h4 {
         font-size: 45px;
-        color: white;
         text-shadow: 4px 2px 8px rgb(0, 0, 255);
     }
 }
-
