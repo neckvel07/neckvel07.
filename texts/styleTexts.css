@@ -2,14 +2,16 @@
 
 body {
     -webkit-padding-start: 2vw;
-    width: 90vw;
+    width: 100vw;
     background-color: rgb(53, 53, 53);
     overflow-x: hidden;
     overflow-y: auto;
+    padding: 0;
 }
 
 * {
     margin: 0;
+    padding: 0;
 }
 
 /*//////////MENU//////////*/
@@ -46,32 +48,26 @@ dialog a img {
 /*//////////CONTEUDO DA PAGINA//////////*/
 
 /*/////ADICAO DE CONTEUDO/////*/
-.addPhotos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100vw;
-    gap: 4vw 0;
-}
-
-div.writeTextContent{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: fit-content;
-    padding: 4vh 4vw;
-    margin: 2vw 0;
-
-    background-color: rgb(255, 255, 255);
-}
-
+.addPhotos,
 .addPhotosAfter {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100vw;
     gap: 4vw 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.writeContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    padding: 4vw;
 }
 
 /*/////CONSTRUCAO DO CARD/////*/
+
 div.cube {
     display: flex;
     flex-direction: column;
@@ -105,7 +101,6 @@ div.texts {
 p.pTexts{
     color: white;
     font-size: 162%;
-    /* text-wrap:wrap; */
     text-align: justify;
 }
 
@@ -169,7 +164,7 @@ h3 {
     }
 
     p.pTexts{
-        font-size: 362%;
+        font-size: 372%;
     }
 }
 
