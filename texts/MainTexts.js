@@ -118,6 +118,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     ];
 
+
     for (let i = 0; i < content.length; i++) {
         const card = document.createElement('div');
         card.classList.add('cube');
@@ -140,7 +141,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             addPhotos.innerHTML = '';
             let af = addPhotos;
             for (let a = 1; a <= content[i].qnt; a++) {
-                // title.innerText = content[i].title;
                 let cardO = document.createElement('div');
                 cardO.classList.add('cube');
                 cardO.innerHTML = `
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     `;
                 let photoO = cardO.querySelector('.img');
                 let formatoImg = (a === 5 && i+1 === 16|| a === 16 && i+1 === 16) ? 'gif' : 'png';
-                photoO.style.backgroundImage = `url(../assets/photos/${i + 1}/${encodeURI(a)}%20.${formatoImg})`;
+                photoO.style.backgroundImage = `url(https://firebasestorage.googleapis.com/v0/b/adrianico-bf656.appspot.com/o/${i+1}%2F${a}%20.${formatoImg}?alt=media)`
                 af.appendChild(cardO);
                 if (a === 2) {
                     document.querySelector(".writeContent").innerHTML = `
