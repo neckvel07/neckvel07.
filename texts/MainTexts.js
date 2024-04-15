@@ -141,7 +141,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             addPhotos.innerHTML = '';
             let af = addPhotos;
             for (let a = 1; a <= content[i].qnt; a++) {
-                let cardO = document.createElement('div');
+                setTimeout(function() {
+                    let cardO = document.createElement('div');
                 cardO.classList.add('cube');
                 cardO.innerHTML = `
             <div class="img"></div>
@@ -156,6 +157,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 `
                     af = addPhotosAfter;
                 }
+                }, 200)
+                
             }
 
         });
