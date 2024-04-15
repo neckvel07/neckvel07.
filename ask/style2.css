@@ -40,6 +40,7 @@ div.textBox{
 div.buttons{
     display: flex;
     width: 100%;
+    margin: 5vw 0;
     justify-content: center;
     flex-wrap: nowrap;
     transition: margin-top 3s;
