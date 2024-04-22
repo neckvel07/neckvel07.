@@ -115,6 +115,20 @@ document.addEventListener("DOMContentLoaded", async function () {
             src: '../assets/photos/miniNoko.jpg',
             qnt: 28,
             text: 'Mesmo não sendo um date, achei que iria ficar bonitinho colocar aqui! Queria começar te dizendo que eu te amo pra krl, eu corri um monte pra conseguir as alianças a tempo e terminar esse teu presente, eu realmente espero que tenha gostado 🥺💙. Tu é tudo pra mim, quando eu digo tudo, eu quero dizer que a única coisa que passa na minha cabeça é tu! Meu coração bate assim ó "- noko noko - noko noko -"! Pra mim só existe tu, acho que agora, mais do que nunca, tu nn precisa ter medo de me perder, eu to oficializando porque eu te amo, mais do que tudo, mais do que eu já amei qualquer coisa! Eu me esforço muito por ti, qualquer sorrisinho que eu consigo tirar de ti já me deixa muito feliz, a tua felicidade é a minha 💓💞! Noko, eu posso ser meio chatinho, ciumento e ter meu defeitos, mas eu sempre vou dar meu máximo por ti, qualquer coisa que tu precisar ou quiser é só me chamar, pode me pedir qualquer coisa, teus desejos são uma ordem, todos dias eu tento ser uma pessoa melhor pra ti, o parceiro que tu merece.. Desde o nosso primeiro date até o dia de hoje, eu continuo super mega hiper apaixonado por ti, cada encontro nosso eu me apaixono mais ainda, eu percebo ainda mais que é do teu lado que eu quero estar.. Falando em date, eu fico muito feliz que a gente consiga sair para lugares e fazer coisas diferentes juntos, cada date é muito especial pra mim, alguns mais do que outros, eu ainda não consigo entender muito o porque, mas tem uns que são mágicos 🤩. Bate aquela ansiedade antes de tu chegar, fico pensando em um milhão de coisas "será q eu to bnt?" "to com a boca suja??" "qual roupa ele deve estar usando?" "o que dá pra gnt fzr hj??" "será que ele já comeu??" "por onde ele tá vindo meudeus??? e pq tá demorando????? 😰"... Sério, é uma emoção enqt tu não chega, chego a calcular o tempo que leva da onde tu ta até eu KSSKKSKS meudeus nn termina, agr nn pode, tá de aliança, 3 meses no mínimo pra poder começar a pensar nisso, por favor kkkkkkkk 😰💙. Acho que embora a gnt já tenha brigado algumas vezes, a gnt sempre conversou e achou uma solução para os nossos problemas, provando que nosso amor é mais forte que qualquer coisa, mesmo diante dessas “dificuldades” a gnt saiu firme e mais forte ainda! Quero terminar dizendo que eu sou o menino mais sortudo do mundo por te ter, meu sonho era ter um menino lindo, gostoso, fofo, com um corpo perfeito, cheio de nerdolices, ciumentinho, cabeludinho, alguém que eu me sentisse bem, que se preocupasse cmg, que pudesse maratona filmes de terror e geek e ainda jogar juntos 🥺, eu realmente achei esse alguém, esse alguém é tu, meu amor 😍❤️. Eu te amo mais que tudo, tu é tudo pra mim, essa foi só uma demonstração do meu amor, espero q tenha aderido ao pacote completo quando eu ofereci hehehe ❤️🧡💛💚💙💜🖤🤍🤎💖💘💝💞💟❣️💕💔💓. Espero q a gente esteja aproveitando muito o dia de hoje, juntinhos! Que nenhum viado se atire em ti, pq tu tá divino 😮, e que tenha gostado dos presentes! Heheheh LOVE UUUUUU 😻💝'
+        },
+        {
+            title: 'Buzz 💍',
+            date: '14/04/2024',
+            src: '../assets/photos/buzz.png',
+            qnt: 50,
+            text: ''
+        },
+        {
+            title: 'Niver da sogrinha',
+            date: '20/04/2024',
+            src: '../assets/photos/niversogrinha.png',
+            qnt: 2,
+            text: ''
         }
     ];
 
