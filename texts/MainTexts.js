@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                 `
                         af = addPhotosAfter;
                     }
-                }, 1200)
+                }, 600)
 
             }
 
