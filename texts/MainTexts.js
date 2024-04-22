@@ -155,24 +155,24 @@ document.addEventListener("DOMContentLoaded", async function () {
             addPhotos.innerHTML = '';
             let af = addPhotos;
             for (let a = 1; a <= content[i].qnt; a++) {
-                setTimeout(function() {
+                setTimeout(function () {
                     let cardO = document.createElement('div');
-                cardO.classList.add('cube');
-                cardO.innerHTML = `
+                    cardO.classList.add('cube');
+                    cardO.innerHTML = `
             <div class="img"></div>
     `;
-                let photoO = cardO.querySelector('.img');
-                let formatoImg = (a === 5 && i+1 === 16|| a === 16 && i+1 === 16) ? 'gif' : 'png';
-                photoO.style.backgroundImage = `url(https://firebasestorage.googleapis.com/v0/b/adrianico-bf656.appspot.com/o/${i+1}%2F${a}%20.${formatoImg}?alt=media)`
-                af.appendChild(cardO);
-                if (a === 2) {
-                    document.querySelector(".writeContent").innerHTML = `
+                    let photoO = cardO.querySelector('.img');
+                    let formatoImg = (a === 5 && i + 1 === 16 || a === 16 && i + 1 === 16) ? 'gif' : 'png';
+                    photoO.style.backgroundImage = `url(https://firebasestorage.googleapis.com/v0/b/adrianico-bf656.appspot.com/o/${i + 1}%2F${a}%20.${formatoImg}?alt=media)`
+                    af.appendChild(cardO);
+                    if (a === 2) {
+                        document.querySelector(".writeContent").innerHTML = `
                 <p class="pTexts">${content[i].text}</p>
                 `
-                    af = addPhotosAfter;
-                }
-                }, 200)
-                
+                        af = addPhotosAfter;
+                    }
+                }, 1200)
+
             }
 
         });
